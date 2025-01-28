@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animation.css">
+  <title>Rock, paper,scissor,lizard and spock</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="container__header">
+      <div class="container__logo">
+        <img src="./images/logo-bonus.svg" alt="logo">
+      </div>
+      <div class="container__score">
+        <div class="container__score-text">
+          <p>Score</p>
+        </div>
+        <div class="container__score-number">
+          <h1 id="score">0</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container__body">
+    <img class="bg-triangle" src="./images/bg-triangle.svg">
+    <div class="container__body-icons">
+      <div class="container__body-linha1">
+        <div class="icons scissor" onclick="YourChoice('scissor');">
+          <div class="background-img">
+            <img src="./images/icon-scissors.svg">
+          </div>
+        </div>
+        <div class="icons paper " onclick="YourChoice('paper');">
+          <div class="background-img">
+            <img src="./images/icon-paper.svg">
+          </div>
+        </div>
+      </div>
+      <div class="container__body-linha2">
+        <div class="icons rock" onclick="YourChoice('rock');">
+          <div class="background-img">
+            <img src="./images/icon-rock.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container__answer ">
+    <div class="container__answer-you__picked">
+      <div class="text">
+        <h1>You Picked</h1>
+      </div>
+      <div class="container__answer-icon">
+        <div class="icons answerIcon yourPick">
+          <div class="background-img">
+            <img src="" id="img-answer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container__answer-winLose">
+      <div class="winLose">
+        <h1 id="decide"></h1>
+      </div>
+      <div class="play__again">
+        <button id="btn-playAgain" onclick="CloseOpenGame()">Play Again</button>
+      </div>
+    </div>
+    <div class="container__answer-house__picked">
+      <div class="text">
+        <h1>The house Picked</h1>
+      </div>
+      <div class="container__answer-icon">
+        <div class="icons answerIconBot">
+          <div class="background-img">
+            <img src="" id="img-answerBot">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container__modal">
+    <div class="header__modal">
+      <h1>Rules</h1>
+      <img src="./images/icon-close.svg" alt="" onclick="FecharModalRules()">
+    </div>
+    <div class="rules">
+      <img src="./images/image-rules.svg" alt="">
+    </div>
+  </div>
+  <footer>
+    <div class="container__button">
+      <button onclick="AbrirModalRules()">Rules</button>
+    </div>
+  </footer>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>
